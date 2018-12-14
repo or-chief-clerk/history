@@ -8,8 +8,13 @@
 #' \describe{
 #'   \item{session_name}{Legislative session}
 #'   \item{Legislator}{Name of representative}
-#'   \item{Distric}{The legislative district they represented in this session}
+#'   \item{District}{The legislative district they represented in this session}
 #'   ...
 #' }
+#' The date the data was retrieved from the Chief Clerk's page is 
+#' available in a \code{retrieved} attribute.
 #' @source \url{https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx}
-"representatives"
+#' @examples
+#' house_reps
+#' attr(house_reps, "retrieved")
+"house_reps"
