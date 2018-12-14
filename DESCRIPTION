@@ -1,0 +1,9 @@
+Package: orhousechron
+Version: 0.0.0.9000
+Title: History of the Oregon House of Representatives
+Description: A dataset containing the legislators who have served in the Oregon House of Representatives.
+Authors@R: person("Charlotte", "Wickham", email = "cwickham@gmail.com", role = c("aut", "cre"))
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
