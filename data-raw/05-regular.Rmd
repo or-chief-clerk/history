@@ -1,0 +1,84 @@
+---
+output: github_document
+---
+
+# `house_reps_regular`
+
+* only includes *Regular* sessions,
+* after OR became a state, with
+* legislators in the house at the **start** of the session, and 
+* their party affiliation at the **start** of the session.
+
+```{r setup}
+library(tidyverse)
+library(here)
+```
+
+```{r}
+house_reps <- here("data-raw", "chronology-patched.csv") %>% 
+  read_csv(col_types = cols(`Desk Number` = col_integer()))
+```
+
+Start when Oregon is a state, February 14, 1859.
+```{r}
+state_history <- house_reps %>% 
+  filter(session_year >= 1859)
+```
+
+Use only regular sessions.
+```{r}
+regular <- state_history %>% 
+  filter(regular)
+```
+
+## Split terms
+
+`split-terms.csv` curated by hand contains legislators that share a session, e.g. one person leaves and is replaced by another:
+```{r}
+splits <- read_csv(here("data-raw", "split-terms.csv"))
+```
+
+For example, the first recorded split term
+```{r}
+first_split <- splits %>% 
+  left_join(regular) %>% 
+  filter(split_id == min(split_id)) 
+
+first_split %>% 
+  select(session_year, Legislator, split_order)
+
+writeLines(first_split$Notes)
+```
+
+Now remove second in seat:
+```{r}
+second_seat <- splits %>% 
+  filter(split_order == 2) %>% 
+  select(session_year, Legislator)
+
+regular_first_in_seat <- regular %>% 
+  anti_join(second_seat) 
+
+regular_first_in_seat %>% 
+  group_by(session_year) %>% 
+  count()
+```
+
+## Only use first party affiliation
+
+```{r}
+regular_no_mixed_party <- regular_first_in_seat %>% 
+  mutate(
+    party_mixed = Party %in% c("R/I/D", "D/I", "R/D", "D/R"), 
+    Party = ifelse(party_mixed, substr(Party, 1, 1), Party)
+  ) %>% 
+  select(-party_mixed)
+```
+
+## Output
+
+```{r}
+house_reps_regular <- regular_no_mixed_party
+usethis::use_data(house_reps_regular, overwrite = TRUE)
+```
+
