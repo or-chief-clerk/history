@@ -40,7 +40,11 @@ while(working){
   working <- str_detect(html, "Working on it")
 }
 retrieved <- Sys.time()
-retrieved_line <- paste0("<!-- Retrieved ", retrieved, " -->")
+retrieved_line <- paste0(
+  "<!-- Retrieved ", 
+  format(retrieved, "%F %T %Z"), 
+  " -->"
+)
 
 write_lines(c(retrieved_line, html), here("data-raw", "chronology-page.html"))
 ```
