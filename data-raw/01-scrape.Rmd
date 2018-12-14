@@ -22,7 +22,6 @@ ses <- Session$new(port = pjs$port)
 ```
 
 ```{r}
-retrieved <- Sys.time()
 ses$go("https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx")
 ses$takeScreenshot()
 ```
@@ -40,7 +39,9 @@ while(working){
   html <- ses$getSource()
   working <- str_detect(html, "Working on it")
 }
+retrieved <- Sys.time()
+retrieved_line <- paste0("<!-- Retrieved ", retrieved, " -->")
 
-write_lines(html, here("data-raw", "chronology-page.html"))
+write_lines(c(retrieved_line, html), here("data-raw", "chronology-page.html"))
 ```
 
