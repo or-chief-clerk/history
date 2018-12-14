@@ -1,0 +1,48 @@
+# Get House of Representatives chronology
+
+Uses [webdriver](https://github.com/rstudio/webdriver) to interact with the [Chief Clerks Office website](https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx) to scrape the Chronological List of House Representatives.  
+
+Outputs `data-raw/chronology-page.html`
+
+Required setup:
+```{r setup}
+# install.packages("rstudio/webdriver")
+# webdriver::install_phantomjs()
+library(rvest)
+library(tidyverse)
+library(here)
+library(webdriver)
+```
+
+## Visit page and expand all sessions, save HTML
+
+```{r}
+pjs <- run_phantomjs()
+ses <- Session$new(port = pjs$port)
+```
+
+```{r}
+retrieved <- Sys.time()
+ses$go("https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx")
+ses$takeScreenshot()
+```
+
+```{r}
+leg_sessions <- ses$findElements(xpath = "//td/a")
+walk(leg_sessions, ~ .$click())
+Sys.sleep(5)
+
+# this can take awhile so wait before getting source
+html <- ses$getSource()
+working <- str_detect(html, "Working on it")
+
+while(working){
+  Sys.sleep(5)
+  html <- ses$getSource()
+  working <- str_detect(html, "Working on it")
+}
+
+
+write_lines(html, here("data-raw", "chronology-page.html"))
+```
+

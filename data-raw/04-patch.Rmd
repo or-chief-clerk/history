@@ -1,0 +1,85 @@
+# Patch House of Representatives chronology
+
+Input `data-raw/chronology-clean.csv`
+
+Output `data-raw/chronology-patched.csv` and `housereps.rda`
+
+```{r setup}
+library(tidyverse)
+library(here)
+```
+
+```{r}
+reps <- read_csv(here("data-raw", "chronology-clean.csv"))
+```
+
+## Rijken, Max
+
+Rijken, Max missing in 1975 but listed in Chronological List of Oregon's Legislatures by Cecil L. Edwards, Senate Historian, published by the Legislative Administration Committee, 1993. 
+
+```{r}
+max_rijken <- data_frame(Legislator = "Rijken, Max",
+    District = 38,
+    Party = "D",
+    Residence = "Newport, Benton, Lane, Lincoln",
+    Gender = "Male",
+    session_name = "1975 Session",
+    session_year = 1975,
+    regular = TRUE
+    ) 
+reps <- reps %>% 
+  bind_rows(max_rijken)
+```
+
+## 1965 Roberts, Betty R.
+```{r}
+betty_roberts <- data_frame(Legislator = "Roberts, Betty R.",
+    District = 6,
+    Party = "D",
+    Residence = "Portland, Multnomah",
+    Gender = "Female",
+    session_name = "1965 Session",
+    session_year = 1965,
+    regular = TRUE) 
+reps <- reps %>%   
+  bind_rows(betty_roberts)
+```
+
+## Jones, Benjamin F.
+
+1909 Jones, Benjamin F. Independence, Polk 12 F? **This seems to be an error**
+
+Should be Republican according to Chronological List of Oregon's Legislatures by Cecil L. Edwards, Senate Historian, published by the Legislative Administration Committee, 1993. 
+
+```{r}
+# Fix one party affilation
+reps[reps$Legislator == "Jones, Benjamin F.", "Party"] <- "R"
+```
+
+
+## Grant, A. S.
+
+```{r}
+filter(reps, Gender == "")
+```
+
+```{r}
+filter(reps, Legislator == "Grant, A. S.")
+```
+
+Assume male from later session:
+```{r}
+reps[reps$Legislator == "Grant, A. S.", "Gender"] <- "Male"
+```
+
+## Output
+
+```{r}
+write_csv(reps, here("data-raw", "chronology-patched.csv"))
+```
+
+```{r}
+representatives <- reps
+usethis::use_data(representatives)
+```
+

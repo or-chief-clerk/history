@@ -1,0 +1,12 @@
+# Data scraping
+
+The data come from the [Chief Clerk's webpage](https://www.oregonlegislature.gov/chief-clerk).
+
+To re-generate the data, run the scripts:
+
+1. `01-scrape.Rmd`
+2. `02-parse.Rmd`
+3. `03-clean.Rmd`
+4. `04-patch.Rmd` 
+
+in order.

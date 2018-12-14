@@ -1,0 +1,54 @@
+# Parse HTML page Get House of Representatives chronology
+
+Parses `data-raw/chronology-page.html` to extract data on representatives.
+
+Outputs `data-raw/chronology-raw.csv`
+
+```{r setup}
+library(rvest)
+library(tidyverse)
+library(here)
+```
+
+## Parse out table with rvest, convert to df
+
+```{r}
+reps <- read_html(here("data-raw", "chronology-page.html"))
+```
+
+```{r}
+# data is in a <table>
+tables_on_page <- html_nodes(reps, css = "table")
+# where summary has particular value
+rep_table <- which(
+  html_attr(tables_on_page, "summary") == "LegislatorsChronological"
+)
+
+rep_df_raw <- tables_on_page[[rep_table]] %>% 
+  html_table(fill = TRUE)
+```
+
+Clean up `NA`s, split by session and remove session id rows:
+```{r}
+rep_df <- rep_df_raw[, !is.na(names(rep_df_raw))] 
+  
+rep_df <- rep_df %>%
+  drop_na(Legislator) %>%
+  mutate(
+    session_line = str_detect(Legislator, "Session :"),
+    session_id = cumsum(session_line))
+
+rep_with_session <- rep_df %>% 
+  group_by(session_id) %>%
+  mutate(session = first(Legislator)) %>%
+  slice(-1) %>%
+  ungroup() %>%
+  select(-session_id, -session_line)
+```
+
+## Output
+
+```{r}
+write_csv(rep_with_session, here("data-raw", "chronology-raw.csv"))
+```
+

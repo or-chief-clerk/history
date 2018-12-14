@@ -1,0 +1,47 @@
+# Clean House of Representatives chronology
+
+Input `data-raw/chronology-raw.csv`
+
+Output `data-raw/chronology-clean.csv`
+
+```{r setup}
+library(tidyverse)
+library(here)
+```
+
+```{r}
+rep_raw <- read_csv(here("data-raw", "chronology-raw.csv"))
+```
+
+## Extract useful session variables
+
+Session year:
+```{r}
+rep_clean <- rep_raw %>%
+  mutate(
+    session_name = session %>% 
+      str_extract("[0-9]{4} (Special )?(Regular )?(Session)?( [0-9])?"),
+    session_year = session_name %>%
+      str_extract("[0-9]{4}") %>% 
+      parse_number(),
+    regular = str_detect(session_name, "Regular") | 
+              !(str_detect(session_name, "Special Session"))) %>% 
+  select(-session)
+```
+
+## Clean up party variable
+
+Set empty party to missing:
+```{r}
+rep_clean <- rep_clean %>%
+  mutate(
+    Party = ifelse(Party %in% c("", "Unknown"), NA_character_, Party)
+    )
+```
+
+## Output
+
+Save:
+```{r}
+write_csv(rep_clean, here("data-raw", "chronology-clean.csv"))
+```
