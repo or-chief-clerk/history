@@ -56,92 +56,10 @@ diffs <- diff_data(clean, patched, ordered = FALSE)
 ```
 
 ``` r
-diff_html <- render_diff(diffs, view = FALSE)
+diff_html <- render_diff(diffs, view = FALSE, fragment = TRUE,
+  summary = TRUE)
 writeLines(diff_html)
 ```
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8'>
-<style TYPE='text/css'>
-.highlighter .add { 
-  background-color: #7fff7f;
-}
-
-.highlighter .remove { 
-  background-color: #ff7f7f;
-}
-
-.highlighter td.modify { 
-  background-color: #7f7fff;
-}
-
-.highlighter td.conflict { 
-  background-color: #f00;
-}
-
-.highlighter .spec { 
-  background-color: #aaa;
-}
-
-.highlighter .move { 
-  background-color: #ffa;
-}
-
-.highlighter .null { 
-  color: #888;
-}
-
-.highlighter table { 
-  border-collapse:collapse;
-}
-
-.highlighter td, .highlighter th {
-  border: 1px solid #2D4068;
-  padding: 3px 7px 2px;
-}
-
-.highlighter th, .highlighter .header, .highlighter .meta {
-  background-color: #aaf;
-  font-weight: bold;
-  padding-bottom: 4px;
-  padding-top: 5px;
-  text-align:left;
-}
-
-.highlighter tr.header th {
-  border-bottom: 2px solid black;
-}
-
-.highlighter tr.index td, .highlighter .index, .highlighter tr.header th.index {
-  background-color: white;
-  border: none;
-}
-
-.highlighter .gap {
-  color: #888;
-}
-
-.highlighter td {
-  empty-cells: show;
-}
-</style>
-<title>
-'clean' vs. 'patched'
-</title>
-</head>
-<body>
-<h1 style="text-align: center;">
-'clean' vs. 'patched'
-</h1>
-<h3 style="text-align: center;">
-2018-12-14 12:56:47
-</h3>
-<div class='highlighter' style='align:center;'>
-<table style='margin: 0px auto; margin-bottom: 2em; text-align: right'>
-<thead>
-       <tr class='header' style='text-align: center'>           <th></th>           <th>#</th>           <th class='modify'>Modified</th>           <th               >Reordered</th>           <th class='remove'>Deleted</th>           <th class='add'>Added</th>   </thead>   <tbody>       <tr>           <td style='font-weight:bold;'>Rows</td>           <td>7389 &rarr; 7391</td>           <td class='modify'>2</td>           <td               >0</td>           <td class='remove'>0</td>           <td class='add'>2</td>       </tr>       <tr>           <td style='font-weight:bold;'>Columns</td>           <td>12</td>           <td class='modify'>0</td>           <td               >0</td>           <td class='remove'>0</td>           <td class='add'>0</td>        </tr>    </tbody></table></div><div class='highlighter'>
 
 <table>
 <thead>
@@ -879,6 +797,3 @@ true
 </tr>
 </tbody>
 </table>
-</div>
-</body>
-</html>

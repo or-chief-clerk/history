@@ -40,6 +40,7 @@ diffs <- diff_data(clean, patched, ordered = FALSE)
 ```
 
 ```{r, results='asis'}
-diff_html <- render_diff(diffs, view = FALSE)
+diff_html <- render_diff(diffs, view = FALSE, fragment = TRUE,
+  summary = TRUE)
 writeLines(diff_html)
 ```
