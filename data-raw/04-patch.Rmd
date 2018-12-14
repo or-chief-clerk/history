@@ -92,9 +92,9 @@ retrieved <-
   str_replace("<!-- Retrieved ", "") %>% 
   lubridate::ymd_hms()
 
-representatives <- reps
-attr(representatives, "retrieved") <- retrieved
+attr(reps, "retrieved") <- retrieved
 
-usethis::use_data(representatives)
+house_reps <- reps
+usethis::use_data(house_reps)
 ```
 
