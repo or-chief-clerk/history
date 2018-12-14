@@ -14,6 +14,7 @@
 #' The date the data was retrieved from the Chief Clerk's page is 
 #' available in a \code{retrieved} attribute.
 #' @source \url{https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx}
+#' @importFrom tibble tibble
 #' @examples
 #' house_reps
 #' attr(house_reps, "retrieved")

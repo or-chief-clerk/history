@@ -5,6 +5,9 @@ Description: A dataset containing the legislators who have served in the Oregon 
 Authors@R: person("Charlotte", "Wickham", email = "cwickham@gmail.com", role = c("aut", "cre"))
 License: MIT + file LICENSE
 Encoding: UTF-8
+Depends: R (>= 3.1.0)
 LazyData: true
 ByteCompile: true
 RoxygenNote: 6.0.1
+Imports: 
+    tibble
