@@ -30,7 +30,6 @@ ses$takeScreenshot()
 ```{r}
 leg_sessions <- ses$findElements(xpath = "//td/a")
 walk(leg_sessions, ~ .$click())
-Sys.sleep(5)
 
 # this can take awhile so wait before getting source
 html <- ses$getSource()
@@ -41,7 +40,6 @@ while(working){
   html <- ses$getSource()
   working <- str_detect(html, "Working on it")
 }
-
 
 write_lines(html, here("data-raw", "chronology-page.html"))
 ```
