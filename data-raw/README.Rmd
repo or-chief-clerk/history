@@ -1,3 +1,7 @@
+---
+output: github_document
+---
+
 # Data scraping
 
 The data come from the [Chief Clerk's webpage](https://www.oregonlegislature.gov/chief-clerk).
@@ -10,3 +14,32 @@ To re-generate the data, run the scripts:
 4. `04-patch.Rmd` 
 
 in order.
+
+
+## Patches 
+
+To see the changes made by patches:
+```{r setup, message=FALSE}
+library(daff)
+library(tidyverse)
+library(here)
+```
+
+
+```{r}
+clean_csv <- here("data-raw", "chronology-clean.csv")
+patched_csv <- here("data-raw", "chronology-patched.csv")
+
+# use same spec to read
+spec <- spec_csv(clean_csv)
+
+clean <- read_csv(clean_csv, col_types = spec)
+patched <- read_csv(patched_csv, col_types = spec)
+
+diffs <- diff_data(clean, patched, ordered = FALSE)
+```
+
+```{r, results='asis'}
+diff_html <- render_diff(diffs, view = FALSE)
+writeLines(diff_html)
+```

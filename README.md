@@ -41,3 +41,14 @@ house_reps
 #> # ... with 7,381 more rows, and 5 more variables: `Desk Number` <int>,
 #> #   Profession <chr>, Notes <chr>, session_year <dbl>, regular <lgl>
 ```
+
+The data comes from the [*Chronological List of Oregon Representatives from 1841 to Present*](https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx). You can see when the data in this package was retrieved with:
+
+``` r
+attr(house_reps, "retrieved")
+#> [1] "2018-12-14 09:39:06 UTC"
+```
+
+The data parsing steps can be found in [`/data-raw`](/data-raw), in particular the data in the package in CSV form can be found in [`chronology-patched.csv`](/data-raw/chronology-patched.csv).
+
+Some patches are made to the data, you can see the changes in the [`data-raw/README.md`](/data-raw/README.md).

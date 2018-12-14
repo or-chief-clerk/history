@@ -33,3 +33,12 @@ A historical list of the representatives in the Oregon State House of Representa
 library(history)
 house_reps
 ```
+
+The data comes from the [*Chronological List of Oregon Representatives from 1841 to Present*](https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx).  You can see when the data in this package was retrieved with:
+```{r}
+attr(house_reps, "retrieved")
+```
+
+The data parsing steps can be found in [`/data-raw`](/data-raw), in particular the data in the package in CSV form can be found in [`chronology-patched.csv`](/data-raw/chronology-patched.csv).
+
+Some patches are made to the data, you can see the changes in the [`data-raw/README.md`](/data-raw/README.md).
