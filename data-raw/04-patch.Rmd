@@ -60,7 +60,7 @@ reps[reps$Legislator == "Jones, Benjamin F.", "Party"] <- "R"
 ## Grant, A. S.
 
 ```{r}
-filter(reps, Gender == "")
+filter(reps, is.na(Gender))
 ```
 
 ```{r}
@@ -74,12 +74,27 @@ reps[reps$Legislator == "Grant, A. S.", "Gender"] <- "Male"
 
 ## Output
 
+
+```{r}
+reps <- reps %>% 
+  arrange(session_year, regular, session_name, District) %>% 
+  select(session_name, Legislator, District, everything())
+```
+
 ```{r}
 write_csv(reps, here("data-raw", "chronology-patched.csv"))
 ```
 
 ```{r}
+retrieved <- 
+  here("data-raw", "chronology-page.html") %>% 
+  read_lines(n_max = 1) %>% 
+  str_replace("<!-- Retrieved ", "") %>% 
+  lubridate::ymd_hms()
+
 representatives <- reps
+attr(representatives, "retrieved") <- retrieved
+
 usethis::use_data(representatives)
 ```
 
