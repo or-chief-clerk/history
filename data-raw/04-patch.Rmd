@@ -10,7 +10,21 @@ library(here)
 ```
 
 ```{r}
-reps <- read_csv(here("data-raw", "chronology-clean.csv"))
+reps <- read_csv(here("data-raw", "chronology-clean.csv"), 
+  col_types = cols(
+  Legislator = col_character(),
+  Role = col_character(),
+  District = col_integer(),
+  Party = col_character(),
+  Residence = col_character(),
+  Gender = col_character(),
+  `Desk Number` = col_integer(),
+  Profession = col_character(),
+  Notes = col_character(),
+  session_name = col_character(),
+  session_year = col_integer(),
+  regular = col_logical()
+))
 ```
 
 ## Rijken, Max
@@ -95,6 +109,6 @@ retrieved <-
 attr(reps, "retrieved") <- retrieved
 
 house_reps <- reps
-usethis::use_data(house_reps)
+usethis::use_data(house_reps, overwrite = TRUE)
 ```
 
