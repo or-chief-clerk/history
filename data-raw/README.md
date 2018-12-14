@@ -797,3 +797,8 @@ true
 </tr>
 </tbody>
 </table>
+In interactive use, use this for full color view:
+
+``` r
+render_diff(diffs)
+```

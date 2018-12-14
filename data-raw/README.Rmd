@@ -44,3 +44,9 @@ diff_html <- render_diff(diffs, view = FALSE, fragment = TRUE,
   summary = TRUE)
 writeLines(diff_html)
 ```
+
+In interactive use, use this for full color view:
+```{r, eval = FALSE}
+render_diff(diffs)
+```
+
