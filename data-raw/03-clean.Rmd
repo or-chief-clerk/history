@@ -20,7 +20,8 @@ Session year:
 rep_clean <- rep_raw %>%
   mutate(
     session_name = session %>% 
-      str_extract("[0-9]{4} (Special )?(Regular )?(Session)?( [0-9])?"),
+      str_extract("[0-9]{4} (Special )?(Regular )?(Session)?( [0-9])?") %>% 
+      str_trim(),
     session_year = session_name %>%
       str_extract("[0-9]{4}") %>% 
       parse_number(),
