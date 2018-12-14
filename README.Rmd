@@ -1,0 +1,35 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# history
+
+history provides historical data on the Oregon State Legislature.
+
+Currently it contains a chronological list of the House of Representatives based on the list on *Chronological List of Oregon Representatives from 1841 to Present* on the [Chief Clerk's Office website](https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx).
+
+## Installation
+
+You can install developement version of history with:
+``` r
+# install.packages("devtools")
+devtools::install_github("history")
+```
+
+## House Representatives
+
+A historical list of the representatives in the Oregon State House of Representatives is in `house_reps`:
+```{r example}
+library(history)
+house_reps
+```
