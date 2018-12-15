@@ -70,8 +70,8 @@ regular_first_in_seat %>%
 ```{r}
 regular_no_mixed_party <- regular_first_in_seat %>% 
   mutate(
-    party_mixed = party %in% c("R/I/D", "D/I", "R/D", "D/R"), 
-    party = ifelse(party_mixed, substr(party, 1, 1), party)
+    party_mixed = party %>% str_detect("/"), 
+    party = ifelse(party_mixed, map_chr(str_split(party, "/"), 1), party)
   ) %>% 
   select(-party_mixed)
 ```

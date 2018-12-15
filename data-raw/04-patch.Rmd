@@ -22,7 +22,7 @@ Rijken, Max missing in 1975 but listed in Chronological List of Oregon's Legisla
 ```{r}
 max_rijken <- data_frame(legislator = "Rijken, Max",
     district = 38,
-    party = "D",
+    party = "Democrat",
     residence = "Newport, Benton, Lane, Lincoln",
     gender = "Male",
     session_name = "1975 Session",
@@ -37,7 +37,7 @@ reps <- reps %>%
 ```{r}
 betty_roberts <- data_frame(legislator = "Roberts, Betty R.",
     district = 6,
-    party = "D",
+    party = "Democrat",
     residence = "Portland, Multnomah",
     gender = "Female",
     session_name = "1965 Session",
@@ -55,7 +55,7 @@ Should be Republican according to Chronological List of Oregon's Legislatures by
 
 ```{r}
 # Fix one party affilation
-reps[reps$legislator == "Jones, Benjamin F.", "party"] <- "R"
+reps[reps$legislator == "Jones, Benjamin F.", "party"] <- "Republican"
 ```
 
 

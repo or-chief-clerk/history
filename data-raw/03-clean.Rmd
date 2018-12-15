@@ -36,9 +36,44 @@ Set empty party to missing:
 ```{r}
 rep_clean <- rep_clean %>%
   mutate(
-    party = ifelse(party %in% c("", "Unknown"), NA_character_, party)
+    party = ifelse(party %in% c("", "Unknown"), 
+      NA_character_, party)
     )
 ```
+
+
+Use full names for parties: 
+```{r}
+unique(rep_clean$party)
+```
+
+Some slashes indicate a person has changed affiliation, others are for an actual party:
+
+```{r}
+party_names <- c(
+  "D"     = "Democrat",
+  "I"     = "Independent",
+  "D/P"   = "Progressive Democrat",
+  "R/P"   = "Progressive Republican",
+  "P"     = "People's",
+  "F"     = "Federalist",
+  "C"     = "Citizen",
+  "U"     = "Union",
+  "R"     = "Republican",
+  "W"     = "Whig",
+  # changed affiliation
+  "R/I/D" = "Republican/Independent/Democrat",
+  "D/I"   = "Democrat/Independent",
+  "R/D"   = "Republican/Democrat",
+  "D/R"   = "Democrat/Republican"
+)
+party_names[unique(rep_clean$party)]
+```
+```{r}
+rep_clean <- rep_clean %>% 
+  mutate(party = party_names[party])
+```
+
 
 ## Output
 
