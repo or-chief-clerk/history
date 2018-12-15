@@ -11,20 +11,8 @@ library(here)
 
 ```{r}
 reps <- read_csv(here("data-raw", "chronology-clean.csv"), 
-  col_types = cols(
-  Legislator = col_character(),
-  Role = col_character(),
-  District = col_integer(),
-  Party = col_character(),
-  Residence = col_character(),
-  Gender = col_character(),
-  `Desk Number` = col_integer(),
-  Profession = col_character(),
-  Notes = col_character(),
-  session_name = col_character(),
-  session_year = col_integer(),
-  regular = col_logical()
-))
+  col_types = cols(desk_number = col_integer())
+)
 ```
 
 ## Rijken, Max
@@ -32,11 +20,11 @@ reps <- read_csv(here("data-raw", "chronology-clean.csv"),
 Rijken, Max missing in 1975 but listed in Chronological List of Oregon's Legislatures by Cecil L. Edwards, Senate Historian, published by the Legislative Administration Committee, 1993. 
 
 ```{r}
-max_rijken <- data_frame(Legislator = "Rijken, Max",
-    District = 38,
-    Party = "D",
-    Residence = "Newport, Benton, Lane, Lincoln",
-    Gender = "Male",
+max_rijken <- data_frame(legislator = "Rijken, Max",
+    district = 38,
+    party = "D",
+    residence = "Newport, Benton, Lane, Lincoln",
+    gender = "Male",
     session_name = "1975 Session",
     session_year = 1975,
     regular = TRUE
@@ -47,11 +35,11 @@ reps <- reps %>%
 
 ## 1965 Roberts, Betty R.
 ```{r}
-betty_roberts <- data_frame(Legislator = "Roberts, Betty R.",
-    District = 6,
-    Party = "D",
-    Residence = "Portland, Multnomah",
-    Gender = "Female",
+betty_roberts <- data_frame(legislator = "Roberts, Betty R.",
+    district = 6,
+    party = "D",
+    residence = "Portland, Multnomah",
+    gender = "Female",
     session_name = "1965 Session",
     session_year = 1965,
     regular = TRUE) 
@@ -67,23 +55,23 @@ Should be Republican according to Chronological List of Oregon's Legislatures by
 
 ```{r}
 # Fix one party affilation
-reps[reps$Legislator == "Jones, Benjamin F.", "Party"] <- "R"
+reps[reps$legislator == "Jones, Benjamin F.", "party"] <- "R"
 ```
 
 
 ## Grant, A. S.
 
 ```{r}
-filter(reps, is.na(Gender))
+filter(reps, is.na(gender))
 ```
 
 ```{r}
-filter(reps, Legislator == "Grant, A. S.")
+filter(reps, legislator == "Grant, A. S.")
 ```
 
 Assume male from later session:
 ```{r}
-reps[reps$Legislator == "Grant, A. S.", "Gender"] <- "Male"
+reps[reps$legislator == "Grant, A. S.", "gender"] <- "Male"
 ```
 
 ## Output
@@ -91,8 +79,8 @@ reps[reps$Legislator == "Grant, A. S.", "Gender"] <- "Male"
 
 ```{r}
 reps <- reps %>% 
-  arrange(session_year, regular, session_name, District) %>% 
-  select(session_name, Legislator, District, everything())
+  arrange(session_year, regular, session_name, district) %>% 
+  select(session_name, legislator, district, everything())
 ```
 
 ```{r}

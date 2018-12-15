@@ -2,16 +2,29 @@
 Data scraping
 =============
 
-The data come from the [Chief Clerk's webpage](https://www.oregonlegislature.gov/chief-clerk).
+`house_reps`
+------------
 
-To re-generate the data, run the scripts:
+The data `house_reps` is a minimally processed version of that on the [Chief Clerk's webpage](https://www.oregonlegislature.gov/chief-clerk).
+
+To re-generate `house_reps`, run the scripts in order:
 
 1.  `01-scrape.Rmd`
 2.  `02-parse.Rmd`
 3.  `03-clean.Rmd`
 4.  `04-patch.Rmd`
 
-in order.
+`house_reps_regular`
+--------------------
+
+`house_reps_regular` is a more processed data set that:
+
+-   only includes *Regular* sessions,
+-   after OR became a state, with
+-   legislators in the house at the **start** of the session, and
+-   their party affiliation at the **start** of the session.
+
+The code to generate `house_reps_regular` is in `05-regular.Rmd`.
 
 Patches
 -------
@@ -34,15 +47,15 @@ spec <- spec_csv(clean_csv)
 
     ## Parsed with column specification:
     ## cols(
-    ##   Legislator = col_character(),
-    ##   Role = col_character(),
-    ##   District = col_integer(),
-    ##   Party = col_character(),
-    ##   Residence = col_character(),
-    ##   Gender = col_character(),
-    ##   `Desk Number` = col_integer(),
-    ##   Profession = col_character(),
-    ##   Notes = col_character(),
+    ##   legislator = col_character(),
+    ##   role = col_character(),
+    ##   district = col_integer(),
+    ##   party = col_character(),
+    ##   residence = col_character(),
+    ##   gender = col_character(),
+    ##   desk_number = col_integer(),
+    ##   profession = col_character(),
+    ##   notes = col_character(),
     ##   session_name = col_character(),
     ##   session_year = col_integer(),
     ##   regular = col_logical()
@@ -71,31 +84,31 @@ writeLines(diff_html)
 session\_name
 </th>
 <th>
-Legislator
+legislator
 </th>
 <th>
-District
+district
 </th>
 <th>
-Role
+role
 </th>
 <th>
-Party
+party
 </th>
 <th>
-Residence
+residence
 </th>
 <th>
-Gender
+gender
 </th>
 <th>
-Desk Number
+desk\_number
 </th>
 <th>
-Profession
+profession
 </th>
 <th>
-Notes
+notes
 </th>
 <th>
 session\_year

@@ -26,7 +26,7 @@ A historical list of the representatives in the Oregon State House of Representa
 library(history)
 house_reps
 #> # A tibble: 7,391 x 12
-#>    session_name Legislator     District Role   Party Residence      Gender
+#>    session_name legislator     district role   party residence      gender
 #>    <chr>        <chr>             <dbl> <chr>  <chr> <chr>          <chr> 
 #>  1 1849 Regular Mulkey, H.J.          1 <NA>   <NA>  Benton         Male  
 #>  2 1849 Regular Smith, G.B.           2 <NA>   <NA>  Benton         Male  
@@ -38,8 +38,8 @@ house_reps
 #>  8 1849 Regular Simmons, M.T.         9 <NA>   <NA>  Clatsop, Lewi… Male  
 #>  9 1849 Regular Conser, Jacob…       10 <NA>   <NA>  Linn           Male  
 #> 10 1849 Regular Dunlap, J.A.         11 <NA>   <NA>  Linn           Male  
-#> # ... with 7,381 more rows, and 5 more variables: `Desk Number` <int>,
-#> #   Profession <chr>, Notes <chr>, session_year <dbl>, regular <lgl>
+#> # ... with 7,381 more rows, and 5 more variables: desk_number <int>,
+#> #   profession <chr>, notes <chr>, session_year <dbl>, regular <lgl>
 ```
 
 The data comes from the [*Chronological List of Oregon Representatives from 1841 to Present*](https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx). You can see when the data in this package was retrieved with:

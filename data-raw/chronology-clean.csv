@@ -1,4 +1,4 @@
-Legislator,Role,District,Party,Residence,Gender,Desk Number,Profession,Notes,session_name,session_year,regular
+legislator,role,district,party,residence,gender,desk_number,profession,notes,session_name,session_year,regular
 "Alonso Leon, Teresa",NA,22,D,"Brooks, Gervais, Salem, Woodburn",Female,36,Government and Public Administration,NA,2018 Special Session,2018,FALSE
 "Barker, Jeff",NA,28,D,Portion of Washington,Male,3,Retired,NA,2018 Special Session,2018,FALSE
 "Barnhart, Phil",NA,11,D,Portions of Lane and Linn,Male,60,Government and Public Administration,NA,2018 Special Session,2018,FALSE

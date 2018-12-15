@@ -16,7 +16,7 @@ library(here)
 
 ```{r}
 house_reps <- here("data-raw", "chronology-patched.csv") %>% 
-  read_csv(col_types = cols(`Desk Number` = col_integer()))
+  read_csv(col_types = cols(desk_number = col_integer()))
 ```
 
 Start when Oregon is a state, February 14, 1859.
@@ -35,7 +35,8 @@ regular <- state_history %>%
 
 `split-terms.csv` curated by hand contains legislators that share a session, e.g. one person leaves and is replaced by another:
 ```{r}
-splits <- read_csv(here("data-raw", "split-terms.csv"))
+splits <- read_csv(here("data-raw", "split-terms.csv")) %>% 
+  rename_all(tolower)
 ```
 
 For example, the first recorded split term
@@ -45,16 +46,16 @@ first_split <- splits %>%
   filter(split_id == min(split_id)) 
 
 first_split %>% 
-  select(session_year, Legislator, split_order)
+  select(session_year, legislator, split_order)
 
-writeLines(first_split$Notes)
+writeLines(first_split$notes)
 ```
 
 Now remove second in seat:
 ```{r}
 second_seat <- splits %>% 
   filter(split_order == 2) %>% 
-  select(session_year, Legislator)
+  select(session_year, legislator)
 
 regular_first_in_seat <- regular %>% 
   anti_join(second_seat) 
@@ -69,8 +70,8 @@ regular_first_in_seat %>%
 ```{r}
 regular_no_mixed_party <- regular_first_in_seat %>% 
   mutate(
-    party_mixed = Party %in% c("R/I/D", "D/I", "R/D", "D/R"), 
-    Party = ifelse(party_mixed, substr(Party, 1, 1), Party)
+    party_mixed = party %in% c("R/I/D", "D/I", "R/D", "D/R"), 
+    party = ifelse(party_mixed, substr(party, 1, 1), party)
   ) %>% 
   select(-party_mixed)
 ```

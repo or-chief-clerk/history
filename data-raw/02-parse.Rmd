@@ -34,13 +34,15 @@ rep_df <- rep_df_raw[, !is.na(names(rep_df_raw))]
   
 rep_df <- rep_df %>%
   drop_na(Legislator) %>%
+  rename_all(tolower) %>% 
+  rename(desk_number = `desk number`) %>% 
   mutate(
-    session_line = str_detect(Legislator, "Session :"),
+    session_line = str_detect(legislator, "Session :"),
     session_id = cumsum(session_line))
 
 rep_with_session <- rep_df %>% 
   group_by(session_id) %>%
-  mutate(session = first(Legislator)) %>%
+  mutate(session = first(legislator)) %>%
   slice(-1) %>%
   ungroup() %>%
   select(-session_id, -session_line)

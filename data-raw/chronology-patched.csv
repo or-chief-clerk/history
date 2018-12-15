@@ -1,4 +1,4 @@
-session_name,Legislator,District,Role,Party,Residence,Gender,Desk Number,Profession,Notes,session_year,regular
+session_name,legislator,district,role,party,residence,gender,desk_number,profession,notes,session_year,regular
 1849 Regular,"Mulkey, H.J.",1,NA,NA,Benton,Male,NA,NA,NA,1849,TRUE
 1849 Regular,"Smith, G.B.",2,NA,NA,Benton,Male,NA,NA,NA,1849,TRUE
 1849 Regular,"Chapman, W.W.",3,NA,NA,Champoeg,Male,NA,NA,Champoeg County later changed to Marion,1849,TRUE

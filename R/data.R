@@ -7,8 +7,8 @@
 #' a legislator in a particular legislative session:
 #' \describe{
 #'   \item{session_name}{Legislative session}
-#'   \item{Legislator}{Name of representative}
-#'   \item{District}{The legislative district they represented in this session}
+#'   \item{legislator}{Name of representative}
+#'   \item{district}{The legislative district they represented in this session}
 #'   ...
 #' }
 #' The date the data was retrieved from the Chief Clerk's page is 
@@ -29,9 +29,9 @@
 #' a legislator who was in office at the start of a particular legislative session:
 #' \describe{
 #'   \item{session_name}{Legislative session}
-#'   \item{Legislator}{Name of representative}
-#'   \item{District}{The legislative district they represented in this session}
-#'   \item{Party}{The affiliation of the legislator at the start of the session.}
+#'   \item{legislator}{Name of representative}
+#'   \item{district}{The legislative district they represented in this session}
+#'   \item{party}{The affiliation of the legislator at the start of the session.}
 #' }
 #' 
 #' @source \url{https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx}

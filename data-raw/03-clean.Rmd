@@ -36,7 +36,7 @@ Set empty party to missing:
 ```{r}
 rep_clean <- rep_clean %>%
   mutate(
-    Party = ifelse(Party %in% c("", "Unknown"), NA_character_, Party)
+    party = ifelse(party %in% c("", "Unknown"), NA_character_, party)
     )
 ```
 
