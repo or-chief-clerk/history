@@ -1,0 +1,34 @@
+# Useful party info 
+
+```{r}
+party_abbr <- c(
+  "Democrat" = "D" , 
+  "Independent" = "I" , 
+  "Progressive Democrat" = "D/P", 
+  "Progressive Republican" = "R/P", 
+  "People's" = "P" , 
+  "Federalist" = "F" , 
+  "Citizen" = "C" , 
+  "Union" = "U" , 
+  "Republican" = "R" , 
+  "Whig" = "W" 
+)
+
+party_colors <- c(
+  "Democrat" = "#377EB8",
+  "Independent" = "#FFD92F",
+  "Progressive Democrat" = "#8C7FCF",
+  "Progressive Republican" = "#A34E89",
+  "People's" = "#8dd3c7",
+  "Federalist" = "#984ea3",
+  "Citizen" = "#F58518",
+  "Union" = "#a65628",
+  "Republican" = "#E41A1C",
+  "Whig" = "#D8B585"
+)
+```
+
+```{r}
+use_data(party_colors, party_abbr, overwrite = TRUE)
+```
+
