@@ -11,7 +11,7 @@ a legislator in a particular legislative session:
 \item{legislator}{name of representative}
 \item{district}{legislative district they represented in this session}
 \item{role}{any roles they occupied during the session, e.g. "Speaker"}
-\item{party}{political party the legislator is affiliated with. Affilations
+\item{party}{political party the legislator is affiliated with. Affiliations
 separated by slashes, indicate a change in affiliation during the session.}
 \item{residence}{counties included in the legislators district}
 \item{gender}{legislator's gender}

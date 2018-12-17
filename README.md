@@ -14,7 +14,7 @@ If you aren't an R user you may still find the data in [`chronology-patched.csv`
 Installation
 ------------
 
-You can install developement version of history with:
+You can install development version of history with:
 
 ``` r
 # install.packages("devtools")

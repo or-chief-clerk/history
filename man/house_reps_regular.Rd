@@ -33,7 +33,7 @@ in regular sessions since Oregon was a state (1860) to present.
 }
 \details{
 \code{house_reps_regular} is a more processed data set than \code{\link{house_reps}}, in
-particluar it:
+particular it:
 \itemize{
 \item only includes \emph{Regular} sessions,
 \item after OR became a state, with

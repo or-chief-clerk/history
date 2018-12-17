@@ -10,7 +10,7 @@
 #'   \item{legislator}{name of representative}
 #'   \item{district}{legislative district they represented in this session}
 #'   \item{role}{any roles they occupied during the session, e.g. "Speaker"}
-#'   \item{party}{political party the legislator is affiliated with. Affilations
+#'   \item{party}{political party the legislator is affiliated with. Affiliations
 #'   separated by slashes, indicate a change in affiliation during the session.}
 #'   \item{residence}{counties included in the legislators district}
 #'   \item{gender}{legislator's gender}
@@ -38,7 +38,7 @@
 #' in regular sessions since Oregon was a state (1860) to present.
 #' 
 #' `house_reps_regular` is a more processed data set than [`house_reps`], in
-#' particluar it:
+#' particular it:
 #'
 #' * only includes *Regular* sessions,
 #' * after OR became a state, with
