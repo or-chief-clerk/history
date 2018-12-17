@@ -4,13 +4,22 @@
 \name{house_reps_regular}
 \alias{house_reps_regular}
 \title{Oregon House Representatives in regular sessions}
-\format{A tibble with 7381 rows and 13 variables where each row represents 
-a legislator who was in office at the start of a particular legislative session:
+\format{A tibble with 4,827 rows and 12 variables where each row represents
+a legislator who was in office \strong{at the start of a regular} legislative session:
 \describe{
-  \item{session_name}{Legislative session}
-  \item{legislator}{Name of representative}
-  \item{district}{The legislative district they represented in this session}
-  \item{party}{The affiliation of the legislator at the start of the session.}
+\item{session_name}{legislative session}
+\item{legislator}{name of representative}
+\item{district}{legislative district they represented in this session}
+\item{role}{any roles they occupied during the session, e.g. "Speaker"}
+\item{party}{political party the legislator is affiliated with at the
+\strong{start} of the legislative session}
+\item{residence}{counties included in the legislators district}
+\item{gender}{legislator's gender}
+\item{desk_number}{the desk at which the legislator sits in the house}
+\item{profession}{legislator's profession}
+\item{notes}{any other information about the legislators term}
+\item{session_year}{the integer year of the session}
+\item{regular}{is this a "Regular" session?}
 }}
 \source{
 \url{https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx}
@@ -19,10 +28,24 @@ a legislator who was in office at the start of a particular legislative session:
 house_reps_regular
 }
 \description{
-A dataset containing the chronological list of Oregon House representatives 
+A dataset containing the chronological list of Oregon House representatives
 in regular sessions since Oregon was a state (1860) to present.
+}
+\details{
+\code{house_reps_regular} is a more processed data set than \code{\link{house_reps}}, in
+particluar it:
+\itemize{
+\item only includes \emph{Regular} sessions,
+\item after OR became a state, with
+\item legislators in the house at the \strong{start} of the session, and
+\item their party affiliation at the \strong{start} of the session.
+}
 }
 \examples{
 house_reps_regular
+}
+\seealso{
+\code{\link{house_reps}} for legislators in all sessions, \code{\link{party_colors}} for some suggested colors for plotting party
+affiliation.
 }
 \keyword{datasets}

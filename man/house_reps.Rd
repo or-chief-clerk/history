@@ -4,15 +4,24 @@
 \name{house_reps}
 \alias{house_reps}
 \title{Oregon House Representatives}
-\format{A tibble with 7381 rows and 13 variables where each row represents 
+\format{A tibble with 7,381 rows and 12 variables where each row represents
 a legislator in a particular legislative session:
 \describe{
-  \item{session_name}{Legislative session}
-  \item{legislator}{Name of representative}
-  \item{district}{The legislative district they represented in this session}
-  ...
+\item{session_name}{legislative session}
+\item{legislator}{name of representative}
+\item{district}{legislative district they represented in this session}
+\item{role}{any roles they occupied during the session, e.g. "Speaker"}
+\item{party}{political party the legislator is affiliated with. Affilations
+separated by slashes, indicate a change in affiliation during the session.}
+\item{residence}{counties included in the legislators district}
+\item{gender}{legislator's gender}
+\item{desk_number}{the desk at which the legislator sits in the house}
+\item{profession}{legislator's profession}
+\item{notes}{any other information about the legislators term}
+\item{session_year}{the integer year of the session}
+\item{regular}{is this a "Regular" session?}
 }
-The date the data was retrieved from the Chief Clerk's page is 
+The date the data was retrieved from the Chief Clerk's page is
 available in a \code{retrieved} attribute.}
 \source{
 \url{https://www.oregonlegislature.gov/chief-clerk/Pages/representatives.aspx}
@@ -21,11 +30,16 @@ available in a \code{retrieved} attribute.}
 house_reps
 }
 \description{
-A dataset containing the chronological list of Oregon House representatives 
+A dataset containing the chronological list of Oregon House representatives
 since 1849 to present.
 }
 \examples{
 house_reps
 attr(house_reps, "retrieved")
+}
+\seealso{
+\code{\link{house_reps_regular}} for only legislators present at the start of
+regular sessions, \code{\link{party_colors}} for some suggested colors for plotting party
+affiliation.
 }
 \keyword{datasets}
