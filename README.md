@@ -56,3 +56,8 @@ attr(house_reps, "retrieved")
 The data parsing steps can be found in [`/data-raw`](/data-raw), in particular the data in the package in CSV form can be found in [`chronology-patched.csv`](/data-raw/chronology-patched.csv).
 
 Some patches are made to the data, you can see the changes in the [`data-raw/README.md`](/data-raw/README.md).
+
+License
+-------
+
+The source code to gather the data and to generate the R package are released under an [MIT license](LICENSE.md).
