@@ -18,7 +18,7 @@ You can install development version of history with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("history")
+devtools::install_github("or-house-vis/history")
 ```
 
 House Representatives
@@ -30,19 +30,19 @@ A historical list of the representatives in the Oregon State House of Representa
 library(history)
 house_reps
 #> # A tibble: 7,391 x 12
-#>    session_name legislator     district role   party residence      gender
-#>    <chr>        <chr>             <dbl> <chr>  <chr> <chr>          <chr> 
-#>  1 1849 Regular Mulkey, H.J.          1 <NA>   <NA>  Benton         Male  
-#>  2 1849 Regular Smith, G.B.           2 <NA>   <NA>  Benton         Male  
-#>  3 1849 Regular Chapman, W.W.         3 <NA>   <NA>  Champoeg       Male  
-#>  4 1849 Regular Matlock, W.T.         4 <NA>   <NA>  Champoeg       Male  
-#>  5 1849 Regular Walling, G.           6 <NA>   <NA>  Clackamas      Male  
-#>  6 1849 Regular Lovejoy, Asa …        7 Speak… <NA>  Clackamas      Male  
-#>  7 1849 Regular Holman, W. D.         8 <NA>   <NA>  Clackamas      Male  
-#>  8 1849 Regular Simmons, M.T.         9 <NA>   <NA>  Clatsop, Lewi… Male  
-#>  9 1849 Regular Conser, Jacob…       10 <NA>   <NA>  Linn           Male  
-#> 10 1849 Regular Dunlap, J.A.         11 <NA>   <NA>  Linn           Male  
-#> # ... with 7,381 more rows, and 5 more variables: desk_number <int>,
+#>    session_name legislator district role  party residence gender
+#>    <chr>        <chr>         <dbl> <chr> <chr> <chr>     <chr> 
+#>  1 1849 Regular Mulkey, H…        1 <NA>  <NA>  Benton    Male  
+#>  2 1849 Regular Smith, G.…        2 <NA>  <NA>  Benton    Male  
+#>  3 1849 Regular Chapman, …        3 <NA>  <NA>  Champoeg  Male  
+#>  4 1849 Regular Matlock, …        4 <NA>  <NA>  Champoeg  Male  
+#>  5 1849 Regular Walling, …        6 <NA>  <NA>  Clackamas Male  
+#>  6 1849 Regular Lovejoy, …        7 Spea… <NA>  Clackamas Male  
+#>  7 1849 Regular Holman, W…        8 <NA>  <NA>  Clackamas Male  
+#>  8 1849 Regular Simmons, …        9 <NA>  <NA>  Clatsop,… Male  
+#>  9 1849 Regular Conser, J…       10 <NA>  <NA>  Linn      Male  
+#> 10 1849 Regular Dunlap, J…       11 <NA>  <NA>  Linn      Male  
+#> # … with 7,381 more rows, and 5 more variables: desk_number <int>,
 #> #   profession <chr>, notes <chr>, session_year <dbl>, regular <lgl>
 ```
 
