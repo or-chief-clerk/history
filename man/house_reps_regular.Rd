@@ -4,7 +4,7 @@
 \name{house_reps_regular}
 \alias{house_reps_regular}
 \title{Oregon House Representatives in regular sessions}
-\format{A tibble with 4,827 rows and 12 variables where each row represents
+\format{A tibble with 4,897 rows and 12 variables where each row represents
 a legislator who was in office \strong{at the start of a regular} legislative session:
 \describe{
 \item{session_name}{legislative session}

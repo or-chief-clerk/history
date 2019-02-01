@@ -3,7 +3,7 @@
 #' A dataset containing the chronological list of Oregon House representatives 
 #' since 1849 to present.
 #' 
-#' @format A tibble with 7,381 rows and 12 variables where each row represents 
+#' @format A tibble with 7,441 rows and 12 variables where each row represents 
 #' a legislator in a particular legislative session:
 #' \describe{
 #'   \item{session_name}{legislative session}
@@ -45,7 +45,7 @@
 #' * legislators in the house at the **start** of the session, and 
 #' * their party affiliation at the **start** of the session.
 #' 
-#' @format A tibble with 4,827 rows and 12 variables where each row represents 
+#' @format A tibble with 4,897 rows and 12 variables where each row represents 
 #' a legislator who was in office **at the start of a regular** legislative session:
 #' \describe{
 #'   \item{session_name}{legislative session}
