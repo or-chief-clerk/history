@@ -1,4 +1,64 @@
 legislator,role,district,party,residence,gender,desk_number,profession,notes,session_name,session_year,regular
+"Alonso Leon, Teresa",NA,22,Democrat,"Brooks, Gervais, Salem, Woodburn",Female,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"Barker, Jeff",NA,28,Democrat,Portion of Washington,Male,NA,Retired,NA,2019 Session,2019,TRUE
+"Barreto, Greg",NA,58,Republican,"Union, Wallowa and portion of Umatilla",Male,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Boles, Denyc",NA,19,Republican,Portion of Marion,Female,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"Bonham, Daniel",NA,59,Republican,"Jefferson, Wheeler and portions of Deschutes and Wasco",Male,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Boshart Davis, Shelly",NA,15,Republican,NA,Female,NA,NA,NA,2019 Session,2019,TRUE
+"Bynum, Janelle",NA,51,Democrat,Portions of Clackamas and Multnomah,Female,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Clem, Brian",NA,21,Democrat,Portion of Marion,Male,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Doherty, Margaret",NA,35,Democrat,Portions of Multnomah and Washington,Female,NA,Education and Training,NA,2019 Session,2019,TRUE
+"Drazan, Christine",NA,39,Republican,NA,Female,NA,NA,NA,2019 Session,2019,TRUE
+"Evans, Paul",NA,20,Democrat,Portions of Marion and Polk,Male,NA,Education and Training,NA,2019 Session,2019,TRUE
+"Fahey, Julie",NA,14,Democrat,Portion of Lane,Female,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Findley, Lynn",NA,60,Republican,"Baker, Grant, Harney, Malheur and portions of Lake",Male,NA,Retired,NA,2019 Session,2019,TRUE
+"Gomberg, David",NA,10,Democrat,"Portions of Lincoln, Polk, Tillamook and Yamhill",Male,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Gorsek, Chris",NA,49,Democrat,Portion of Multnomah,Male,NA,Education and Training,NA,2019 Session,2019,TRUE
+"Greenlick, Mitch",NA,33,Democrat,Portions of Multnomah and Washington,Male,NA,Education and Training,NA,2019 Session,2019,TRUE
+"Hayden, Cedric",NA,7,Republican,Portions of Douglas and Lane,Male,NA,Health Science,NA,2019 Session,2019,TRUE
+"Helm, Ken",NA,34,Democrat,Portion of Washington,Male,NA,"Law, Public Safety, Corrections and Security",NA,2019 Session,2019,TRUE
+"Helt, Cheri",NA,54,Republican,NA,Female,NA,NA,NA,2019 Session,2019,TRUE
+"Hernandez, Diego",NA,47,Democrat,Portion of Multnomah,Male,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Holvey, Paul",Speaker Pro Tempore,8,Democrat,Portion of Lane,Male,NA,"Architecture, Construction and Skilled Trade",NA,2019 Session,2019,TRUE
+"Keny-Guyer, Alissa",NA,46,Democrat,Portion of Multnomah,Female,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Kotek, Tina",Speaker,44,Democrat,Portion of Multnomah,Female,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Leif, Gary",NA,2,Republican,"Portions of Douglas, Jackson, Josephine",Male,NA,Retired,NA,2019 Session,2019,TRUE
+"Lewis, Rick",NA,18,Republican,Portions of Clackamas and Marion,Male,NA,Retired,NA,2019 Session,2019,TRUE
+"Lively, John",NA,12,Democrat,Portion of Lane,Male,NA,Finance,NA,2019 Session,2019,TRUE
+"Marsh, Pam",NA,5,Democrat,Portion of Jackson,Female,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"McKeown, Caddy",NA,9,Democrat,"Portions of Coos, Douglas, Lane and Lincoln",Female,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"McLain, Susan",NA,29,Democrat,Portion of Washington,Female,NA,Retired,NA,2019 Session,2019,TRUE
+"McLane, Mike",NA,55,Republican,"Crook and portions of Deschutes, Jackson, Klamath and Lake",Male,NA,"Law, Public Safety, Corrections and Security",NA,2019 Session,2019,TRUE
+"Meek, Mark",NA,40,Democrat,Portion of Clackamas,Male,NA,"Marketing, Sales and Service",NA,2019 Session,2019,TRUE
+"Mitchell, Tiffiny",NA,32,Democrat,NA,Female,NA,NA,NA,2019 Session,2019,TRUE
+"Nathanson, Nancy",NA,13,Democrat,Portion of Lane,Female,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"Nearman, Mike",NA,23,Republican,"Portions of Benton, Marion, Polk and Yamhill",Male,NA,Information Technology,NA,2019 Session,2019,TRUE
+"Neron, Courtney",NA,26,Democrat,NA,Female,NA,NA,NA,2019 Session,2019,TRUE
+"Noble, Ron",NA,24,Republican,Portions of Washington and Yamhill,Male,NA,Retired,NA,2019 Session,2019,TRUE
+"Nosse, Rob",NA,42,Democrat,Portion of Multnomah,Male,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"Piluso, Carla",NA,50,Democrat,Portion of Multnomah,Female,NA,Retired,NA,2019 Session,2019,TRUE
+"Post, Bill",NA,25,Republican,Portion of Marion,Male,NA,"Arts, Audio/Video Technology and Communications",NA,2019 Session,2019,TRUE
+"Power, Karin",NA,41,Democrat,Portions of Clackamas and Multnomah,Female,NA,"Law, Public Safety, Corrections and Security",NA,2019 Session,2019,TRUE
+"Prusak, Rachel",NA,37,Democrat,NA,Female,NA,NA,NA,2019 Session,2019,TRUE
+"Rayfield, Dan",NA,16,Democrat,Portion of Benton,Male,NA,"Law, Public Safety, Corrections and Security",NA,2019 Session,2019,TRUE
+"Reardon, Jeff",NA,48,Democrat,Portions of Clackamas and Multnomah,Male,NA,Education and Training,NA,2019 Session,2019,TRUE
+"Reschke, E. Werner",NA,56,Republican,Portions of Klamath and Lake,Male,NA,"Marketing, Sales and Service",NA,2019 Session,2019,TRUE
+"Salinas, Andrea",NA,38,Democrat,Portions of Clackamas and Multnomah,Female,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"Sanchez, Tawna",NA,43,Democrat,Portion of Multnomah,Female,NA,Human Services,NA,2019 Session,2019,TRUE
+"Schouten, Sheri",NA,27,Democrat,Portion of Washington,Female,NA,Health Science,NA,2019 Session,2019,TRUE
+"Smith Warner, Barbara",NA,45,Democrat,Portion of Multnomah,Female,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"Smith, David Brock",NA,1,Republican,"Curry and portions of Coos, Douglas and Josephine",Male,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Smith, Greg",NA,57,Republican,"Gilliam, Morrow, Sherman and portions of Umatilla and Wasco",Male,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Sollman, Janeen",NA,30,Democrat,Portion of Washington,Female,NA,"Marketing, Sales and Service",NA,2019 Session,2019,TRUE
+"Sprenger, Sherrie",NA,17,Republican,Portions of Linn and Marion,Female,NA,Business Management and Administration,NA,2019 Session,2019,TRUE
+"Stark, Duane",NA,4,Republican,Portions of Jackson and Josephine,Male,NA,Clergy,NA,2019 Session,2019,TRUE
+"Wallan, Kim",NA,6,Republican,NA,Female,NA,NA,NA,2019 Session,2019,TRUE
+"Wilde, Marty",NA,11,Democrat,NA,Male,NA,NA,NA,2019 Session,2019,TRUE
+"Williams, Anna",NA,52,Democrat,NA,Female,NA,NA,NA,2019 Session,2019,TRUE
+"Williamson, Jennifer",Democratic Leader,36,Democrat,Portion of Multnomah,Female,NA,"Law, Public Safety, Corrections and Security",NA,2019 Session,2019,TRUE
+"Wilson, Carl",Republican Leader,3,Republican,Portion of Josephine,Male,NA,"Arts, Audio/Video Technology and Communications",NA,2019 Session,2019,TRUE
+"Witt, Bradley",NA,31,Democrat,Columbia and portions of Multnomah and Washington,Male,NA,Government and Public Administration,NA,2019 Session,2019,TRUE
+"Zika, Jack",NA,53,Republican,NA,Male,NA,NA,NA,2019 Session,2019,TRUE
 "Alonso Leon, Teresa",NA,22,Democrat,"Brooks, Gervais, Salem, Woodburn",Female,36,Government and Public Administration,NA,2018 Special Session,2018,FALSE
 "Barker, Jeff",NA,28,Democrat,Portion of Washington,Male,3,Retired,NA,2018 Special Session,2018,FALSE
 "Barnhart, Phil",NA,11,Democrat,Portions of Lane and Linn,Male,60,Government and Public Administration,NA,2018 Special Session,2018,FALSE
@@ -7218,7 +7278,7 @@ McCully John W.,NA,11,Democrat,Jackson,Male,NA,NA,NA,1859 Special Session,1859,F
 "Trevitt, Victor",NA,32,Democrat,Wasco,Male,NA,NA,NA,1859 Special Session,1859,FALSE
 "T'Vault, William",Speaker,13,Democrat,Jackson,Male,NA,NA,NA,1859 Special Session,1859,FALSE
 "Wait, J. K.",NA,29,Democrat,Polk,Male,NA,NA,NA,1859 Special Session,1859,FALSE
-"Bonham, B.F.",NA,22,Democrat,Marion,Male,NA,NA,"This is a list of legislators, officers and staff which convened July 5, 1858, prior to the time that Oregon was admitted as a state. Both branches of the legislature met at Salem on July 5, remaining in session four days. Because there was doubts as to whether Oregon had yet been admitted, owing to the impossibility of direct and speedy communication with the national capital, it was decided to adjourn until September of the same year. On September 13 part of the members of both branches of the legislature assembled at the Capitol. It appearing that the State had not yet been admitted again so they adjourned. The Territorial Legislature, as had been its usual custom, then convened in December 6, 1858, and transacted the business of the State as usual during the session, which lasted until January 22, 1859",1858 Session,1858,TRUE
+"Bonham, B. F.",NA,22,Democrat,Marion,Male,NA,NA,"This is a list of legislators, officers and staff which convened July 5, 1858, prior to the time that Oregon was admitted as a state. Both branches of the legislature met at Salem on July 5, remaining in session four days. Because there was doubts as to whether Oregon had yet been admitted, owing to the impossibility of direct and speedy communication with the national capital, it was decided to adjourn until September of the same year. On September 13 part of the members of both branches of the legislature assembled at the Capitol. It appearing that the State had not yet been admitted again so they adjourned. The Territorial Legislature, as had been its usual custom, then convened in December 6, 1858, and transacted the business of the State as usual during the session, which lasted until January 22, 1859",1858 Session,1858,TRUE
 "Bowlby, W.",NA,31,Republican,Washington,Male,NA,NA,NA,1858 Session,1858,TRUE
 "Burch, B.F.",NA,28,Democrat,Polk,Male,NA,NA,NA,1858 Session,1858,TRUE
 "Cochran, R.B.",NA,16,Democrat,Lane,Male,NA,NA,NA,1858 Session,1858,TRUE
